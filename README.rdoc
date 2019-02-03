@@ -1,0 +1,8 @@
+Create an application with the following features:
+1. SignUp: User can perform signup with First Name, Last Name, DOB, Email, Profile Picture, Password. Validate each field and password should be encrypted and upload the profile picture.
+2. Login: Registered user can log in using their email and password.
+3. Profile: Once a user gets successfully LogIn or Registration show their details on the next screen.
+4. Update Profile Info: User can able to update all the details. 
+Multiple users can perform SignUp and see their profile by signing into the app.
+
+Used devise gem

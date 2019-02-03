@@ -1,0 +1,14 @@
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+	<div class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></div>
+	<strong>First name is <%= current_user.first_name %></strong><br>
+	<strong>Last name is <%= current_user.last_name %></strong><br>
+	<strong>DOB is <%= current_user.date_of_birth %></strong><br>
+  <strong>Logged in email is <%= current_user.email %></strong><br>
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> 
+<% end %>
+</p>
